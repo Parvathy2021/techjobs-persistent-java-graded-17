@@ -14,10 +14,10 @@ import java.util.Objects;
 public abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id;
 
-    @NotBlank(message = "Name field should not br Blank!")
+    @NotBlank(message = "Name field should not be Blank!")
     @Size(min =3, max = 150, message = "Name must be between 3 and 150 characters")
     private String name;
 
