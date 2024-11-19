@@ -21,13 +21,13 @@ public class EmployerController {
     @GetMapping("add")
     public String displayAddEmployerForm(Model model) {
         model.addAttribute(new Employer());
-        return "/add";
+        return "employers/add";
     }
 
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("employers", employerRepository.findAll());
-        return "/index";
+        return "employers/index";
     }
 
     @PostMapping("add")
